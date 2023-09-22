@@ -11,7 +11,7 @@
         android:id="@+id/btnFragment1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fragment 1"
+        android:text="@string/fragment_1"
         app:layout_constraintEnd_toStartOf="@+id/btnFragment2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,21 +21,19 @@
         android:id="@+id/btnFragment2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fragment 2"
+        android:text="@string/fragment_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnFragment1"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <fragment
-        android:id="@+id/fragment"
-        android:name="com.slowpoke.fragmentsbasics.FirstFragment"
+    <FrameLayout
+        android:id="@+id/flFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFragment1"
-        tools:layout="@layout/fragment_first"/>
+        app:layout_constraintTop_toBottomOf="@+id/btnFragment1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

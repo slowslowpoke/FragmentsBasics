@@ -9,5 +9,32 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val firstFragment = FirstFragment()
+        val secondFragment = SecondFragment()
+
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.flFragment, firstFragment)
+            commit()
+        }
+
+        val btnFragment1 = findViewById<Button>(R.id.btnFragment1)
+        val btnFragment2 = findViewById<Button>(R.id.btnFragment2)
+
+        btnFragment1.setOnClickListener {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.flFragment, firstFragment)
+                addToBackStack(null)
+                commit()
+            }
+        }
+
+        btnFragment2.setOnClickListener {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.flFragment, secondFragment)
+                addToBackStack(null)
+                commit()
+            }
+        }
+
     }
 }
